@@ -2,7 +2,7 @@
     "name": "to-dachshund",
     "displayName": "ToDachshund",
     "description": "make code comments a little longer and a bit more 'arf'",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "cameronprior",
     "engines": {
         "vscode": "^1.19.0"
@@ -15,15 +15,19 @@
     ],
     "main": "./extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.toDachshund",
-            "title": "To Dachshund"
-        }],
-        "menus": {
-            "editor/context": [{
+        "commands": [
+            {
                 "command": "extension.toDachshund",
-                "group": "navigation@1.31"
-            }]
+                "title": "To Dachshund"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "extension.toDachshund",
+                    "group": "navigation@1.31"
+                }
+            ]
         }
     },
     "scripts": {

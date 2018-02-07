@@ -2,6 +2,8 @@
 
 Add some arf to your comments, the longer the better
 
+Right click a line of code then select "To Dachshund"
+
 
 ### Upcoming Features
 
