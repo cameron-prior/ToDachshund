@@ -1,7 +1,7 @@
 {
-    "name": "dachshundize",
-    "displayName": "dachshundize",
-    "description": "make code comments a little more arf",
+    "name": "to-dachshund",
+    "displayName": "ToDachshund",
+    "description": "make code comments a little longer and a bit more 'arf'",
     "version": "0.0.1",
     "publisher": "cameronprior",
     "engines": {

@@ -15,6 +15,7 @@ function* getDachshundLines(text) {
     yield `(( (  ` + spaces + `   (( (`;
     yield `\`\`-'` + spaces + `     \`\`-'`;
 
+    // A lovely pristine dachshund, for reference
     //     var dachshund = `
     // ,                    ," e\`--o
     // ((                   (  | __,'
@@ -23,12 +24,11 @@ function* getDachshundLines(text) {
     //  /) ._______________.  )
     // (( (               (( (
     //  \`\`-'               \`\`-' `;
-
 }
 
 function activate(context) {
 
-    console.log('Congratulations, your extension "dachshundize" is now active!');
+    console.log('"dachshundize" is now active');
 
     let disposable = vscode.commands.registerCommand('extension.toDachshund', function() {
 
@@ -38,14 +38,15 @@ function activate(context) {
         }
 
         editor.edit(function(editBuilder) {
-            const cursor = editor.selection.active;
-            const lineNum = cursor.line
+            const lineNum = editor.selection.active.line
             var text = editor.document.lineAt(lineNum).text
+            var lineComment = "//";
 
             editBuilder.delete(new vscode.Range(lineNum, 0, lineNum, text.length))
 
             for (let line of getDachshundLines(text)) {
-                editBuilder.insert(new vscode.Position(lineNum, 0), line + "\n");
+                var output = lineComment + line + "\n"
+                editBuilder.insert(new vscode.Position(lineNum, 0), output);
             }
         })
 
@@ -56,4 +57,4 @@ function activate(context) {
 exports.activate = activate;
 
 function deactivate() {}
-exports.deactivate = deactivate;;
+exports.deactivate = deactivate;
