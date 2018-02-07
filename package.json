@@ -2,7 +2,7 @@
     "name": "to-dachshund",
     "displayName": "ToDachshund",
     "description": "make code comments a little longer and a bit more 'arf'",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "cameronprior",
     "engines": {
         "vscode": "^1.19.0"
