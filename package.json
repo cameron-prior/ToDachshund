@@ -1,0 +1,40 @@
+{
+    "name": "dachshundize",
+    "displayName": "dachshundize",
+    "description": "make code comments a little more arf",
+    "version": "0.0.1",
+    "publisher": "cameronprior",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.toDachshund"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [{
+            "command": "extension.toDachshund",
+            "title": "To Dachshund"
+        }],
+        "menus": {
+            "editor/context": [{
+                "command": "extension.toDachshund",
+                "group": "navigation@1.31"
+            }]
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.6.1",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
