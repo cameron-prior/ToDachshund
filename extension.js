@@ -9,7 +9,7 @@ function* getDachshundLines(text) {
 
     yield `,     ` + spaces + `     ," e\`--o`;
     yield `((    ` + spaces + `     (  | __,'`;
-    yield ` \\~--` + dashes + `----' \_;/`;
+    yield ` \\~--` + dashes + `------' \_;/`;
     yield ` (    ` + text + `        /`;
     yield ` /) ._` + underscores + `____.  )`;
     yield `(( (  ` + spaces + `   (( (`;
@@ -23,7 +23,7 @@ function* getDachshundLines(text) {
     //  (                      /
     //  /) ._______________.  )
     // (( (               (( (
-    //  \`\`-'               \`\`-' `;
+    //  \`\`-'               \`\`-'   `;
 }
 
 function activate(context) {
