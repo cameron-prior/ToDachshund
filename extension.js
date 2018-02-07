@@ -40,7 +40,7 @@ function activate(context) {
         editor.edit(function(editBuilder) {
             const lineNum = editor.selection.active.line
             var text = editor.document.lineAt(lineNum).text
-            var lineComment = "//";
+            var lineComment = "//  ";
 
             editBuilder.delete(new vscode.Range(lineNum, 0, lineNum, text.length))
 
